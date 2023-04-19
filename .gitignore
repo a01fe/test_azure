@@ -1,0 +1,5 @@
+# Ignore virtual environmennt
+/.venv/
+
+# Ignore compiled Python files
+*.pyc

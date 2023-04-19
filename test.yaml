@@ -1,0 +1,12 @@
+- name: Test azure collection
+  gather_facts: false
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: Get info about all resource groups
+      azure.azcollection.azure_rm_resourcegroup_info:
+      register: resource_group_info
+
+    - name: Show resource group info
+      ansible.builtin.debug:
+        var: "resource_group_info"
